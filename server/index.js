@@ -7,10 +7,12 @@ const nodemailer = require("nodemailer");
 const shortid = require("shortid");
 
 const cliente = new Pool({
-  host: "localhost",
-  user: "postgres",
-  password: "123",
-  database: "visiona",
+  // host: "localhost",
+  // user: "postgres",
+  // password: "123",
+  // database: "visiona",
+  connectionString: 'postgres://jgkjdnpq:LSQ78hphQqJtTT5At_aS9Z-T3Dps25iG@silly.db.elephantsql.com/jgkjdnpq'
+
 });
 
 function buscaUsuario(login, senha, res) {
