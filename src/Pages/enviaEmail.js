@@ -23,7 +23,7 @@ function EnviaEmail() {
         [value.target.name]: value.target.value,
       }))
     };
-
+//a
     const validaVazio = () => {
       let isVazio = false
       if(document.getElementById('obg1').value === ''){
