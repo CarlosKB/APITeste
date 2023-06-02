@@ -456,14 +456,14 @@ app.post("/validaEmail", async (req, res) => {
       port: 587,
       secure: false,
       auth: {
-        user: 'group4desk@outlook.com',
-        pass: '4deskparadesk',
+        user: 'fateccarlos@gmail.com',
+        pass: '24g11r84 ',
       },
     });
 
     transporter.sendMail({
       // Envia o Email
-      from: "group4desk@outlook.com",
+      from: "fateccarlos@gmail.com",
       to: email, // Email destinatário
       subject: "Visiona - token para validação de e-mail",
       html: `<h3>Token para validação de e-mail no sistema da Visiona.</h3></br> <h4>Seu token é: <b>${token}</b></h4>`,
