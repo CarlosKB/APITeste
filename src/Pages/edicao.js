@@ -12,7 +12,7 @@ export function Edicao() {
     var userId = localStorage.getItem('user')
     var carrega = true
     useEffect(()=>{
-        axios.post("http://localhost:3001/editar",{
+        axios.post("https://api-back4-desk.vercel.app/editar",{
             userId: userId
         }).then((response)=>{
           console.log(response);

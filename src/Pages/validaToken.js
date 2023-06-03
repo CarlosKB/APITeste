@@ -43,7 +43,7 @@ export function ValidaToken() {
     }
 
     const reenviarToken = ()=>{
-          axios.post('http://localhost:3001/enviar-token',{
+          axios.post('https://api-back4-desk.vercel.app/enviar-token',{
               email: localStorage.getItem('userEmail')
             }).then((response)=>{
               localStorage.setItem('token', response.data.token)

@@ -12,7 +12,7 @@ function Dashboard() {
   const chartRef = useRef();
 
   useEffect(() => {
-        axios.get('http://localhost:3001/userAtivo',{
+        axios.get('https://api-back4-desk.vercel.app/userAtivo',{
 
         }).then((response)=>{
             const userAtivo = response.data.userStatus
@@ -21,7 +21,7 @@ function Dashboard() {
             localStorage.setItem('userAtivo', userAtivo)
             //localStorage.setItem('userInativo', userInativo)
         })
-        axios.get('http://localhost:3001/userInativo',{
+        axios.get('https://api-back4-desk.vercel.app/userInativo',{
 
         }).then((response)=>{
             //const userAtivo = response.data.userAtivo

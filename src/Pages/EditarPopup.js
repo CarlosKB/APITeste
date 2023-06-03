@@ -123,7 +123,7 @@ export function EditarPopup() {
     const tableData = JSON.parse(tableDataJson);
     desabilitaCadastro();
     axios
-      .post("http://localhost:3001/confirmarEditar", {
+      .post("https://api-back4-desk.vercel.app/confirmarEditar", {
         login: document.getElementById("obg1").value,
         firstname: document.getElementById("obg2").value,
         userId: tableData.tableId,

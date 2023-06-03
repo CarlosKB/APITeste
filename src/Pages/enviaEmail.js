@@ -38,7 +38,7 @@ function EnviaEmail() {
     
 
   const handleClickButton = () =>{
-    axios.post('http://localhost:3001/enviar-token',{
+    axios.post('https://api-back4-desk.vercel.app/enviar-token',{
       email: values.email
     }).then((response)=>{
       localStorage.setItem('token', response.data.token)

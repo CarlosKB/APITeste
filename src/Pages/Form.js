@@ -119,7 +119,7 @@ export function Form() {
 
   const validaEmail = async () => {
     try {
-      const response = await axios.post("http://localhost:3001/validaEmail", {
+      const response = await axios.post("https://api-back4-desk.vercel.app/validaEmail", {
         email: values.email,
         login: values.login
       });
@@ -175,7 +175,7 @@ export function Form() {
     const date = new Date().toLocaleString();
     if (await validaEmail()) {
       // console.log('Ta vindo aqui');
-      axios.post("http://localhost:3001/cadastro", {
+      axios.post("https://api-back4-desk.vercel.app/cadastro", {
           login: values.login,
           firstname: values.firstname,
           lastname: values.lastname,

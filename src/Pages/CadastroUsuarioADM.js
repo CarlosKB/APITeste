@@ -84,7 +84,7 @@ export function CadastroUsuarioADM() {
     desabilitaCadastro();
     const date = new Date().toLocaleString();
     axios
-      .post("http://localhost:3001/cadastroADM", {
+      .post("https://api-back4-desk.vercel.app/cadastroADM", {
         login: values.login,
         firstname: values.firstname,
         lastname: values.lastname,

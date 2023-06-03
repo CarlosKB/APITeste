@@ -86,7 +86,7 @@ export function AlterarSenha() {
   }
 
   const handleClickButton = () => {
-    axios.post("http://localhost:3001/alterarSenha", {
+    axios.post("https://api-back4-desk.vercel.app/alterarSenha", {
       email: localStorage.getItem('userEmail'),
       password: values.password
     }).then((response) => {

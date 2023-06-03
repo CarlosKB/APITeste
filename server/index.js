@@ -482,6 +482,6 @@ app.post("/alterarSenha", (req, res) => {
   alteraSenha(email, password, res);
 });
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log("rodando servidor");
 });
