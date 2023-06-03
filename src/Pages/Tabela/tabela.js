@@ -155,7 +155,7 @@ function Lista({ users }) {
   }
 
   function modifyStatus(item) {
-    fetch(`http://localhost:3001/usuarios/${item.login}`, {
+    fetch(`https://api-back4-desk.vercel.app/usuarios/${item.login}`, {
       method: "DELETE",
     })
       .then((response) => response.json())
@@ -216,7 +216,7 @@ function Lista({ users }) {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3001/usuariosDelete/${item.login}`, {
+        fetch(`https://api-back4-desk.vercel.app/usuariosDelete/${item.login}`, {
           method: "DELETE",
         }).then((response) => {
           response.json()
