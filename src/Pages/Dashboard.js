@@ -8,8 +8,7 @@ import BottomNavbar from "../components/BottomNavbar";
 import axios from 'axios';
 
 function Dashboard() {
-
-  const chartRef = useRef();
+const chartRef = useRef();
 
   async function seila(){
     var seila = parseInt(localStorage.getItem('contador'))
@@ -20,7 +19,7 @@ function Dashboard() {
   }
   seila()
   useEffect(() => {
-        axios.get('https://api-back4-desk.vercel.app/usersStatus',{
+        axios.get('http://localhost:3001/usersStatus',{
         }).then((response)=>{
             const data = response.data
             console.log(data);
