@@ -20,7 +20,7 @@ function Dashboard() {
   }
   seila()
   useEffect(() => {
-        axios.get('http://localhost:3001/usersStatus',{
+        axios.get('https://api-back4-desk.vercel.app/usersStatus',{
         }).then((response)=>{
             const data = response.data
             console.log(data);
