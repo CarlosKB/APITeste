@@ -8,7 +8,8 @@ import BottomNavbar from "../components/BottomNavbar";
 import axios from 'axios';
 
 function Dashboard() {
-const chartRef = useRef();
+
+  const chartRef = useRef();
 
   async function seila(){
     var seila = parseInt(localStorage.getItem('contador'))
@@ -78,4 +79,3 @@ const chartRef = useRef();
 }
 
 export default Dashboard;
-
