@@ -17,105 +17,6 @@ import { useEffect } from "react";
 import Swal from "sweetalert2";
 
 function Lista({ users }) {
-  // // paginação
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const itemsPerPage = 10;
-
-  // function paginate(items, pageNumber, pageSize) {
-  //   const startIndex = (pageNumber - 1) * pageSize;
-  //   return items.slice(startIndex, startIndex + pageSize);
-  // }
-  // // pop-up
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // // pesquisa e filtro
-  // // opção selecionada na cbx
-  // const [selectedOption, setSelectedOption] = useState();
-  // var filtroSelecionado = selectedOption;
-
-  // // set opção selecionada na cbx
-  // const handleChangeOption = (event) => {
-  //   setSelectedOption(event.target.value);
-  //   setCurrentPage(1);
-  // };
-
-  // // pega o valor pesquisado no input
-  // const [searchValue, setSearchValue] = useState("");
-
-  // // filtra a pesquisa de acordo com a opção selecionada na combobox
-  // var filteredUsers;
-  // switch (filtroSelecionado) {
-  //   case "email":
-  //     filteredUsers = users.filter((item) =>
-  //       item.email.toLowerCase().includes(searchValue.toLowerCase())
-  //     );
-  //     break;
-  //   case "status":
-  //     filteredUsers = users.filter(
-  //       (item) =>
-  //         typeof item.status === "string" &&
-  //         item.status.toLowerCase().startsWith(searchValue.toLowerCase())
-  //     );
-  //     break;
-  //   case "data":
-  //     filteredUsers = users.filter(
-  //       (item) =>
-  //         typeof item.datacadastro === "string" &&
-  //         item.datacadastro.toLowerCase().includes(searchValue.toLowerCase())
-  //     );
-  //     break;
-  //   case "tipo":
-  //     filteredUsers = users.filter(
-  //       (item) =>
-  //         typeof item.usuariotipo === "string" &&
-  //         item.usuariotipo.toLowerCase().startsWith(searchValue.toLowerCase())
-  //     );
-  //     break;
-  //   default:
-  //     filteredUsers = users.filter(
-  //       (item) =>
-  //         typeof item.login === "string" &&
-  //         item.login.toLowerCase().includes(searchValue.toLowerCase())
-  //     );
-  //     break;
-  // }
-  // // atualiza p/ primeira pag ao pesquisar
-  // useEffect(() => {
-  //   setCurrentPage(1);
-  // }, [searchValue, filtroSelecionado]);
-
-  // function toggleModal() {
-  //   setIsOpen(!isOpen);
-  // }
-
-  // async function editUsers(item) {
-  //   const tableLogin = item.login;
-  //   const tableNome = item.nome;
-  //   const tableSenha = item.senha;
-  //   const tableEmail = item.email;
-  //   const tableTipo = item.usuariotipo;
-  //   const tableId = item.id;
-  //   const tableData = {
-  //     tableLogin: tableLogin,
-  //     tableNome: tableNome,
-  //     tableSenha: tableSenha,
-  //     tableEmail: tableEmail,
-  //     tableTipo: tableTipo,
-  //     tableId: tableId,
-  //   };
-  //   console.log(tableData);
-  //   localStorage.setItem("tableUser", JSON.stringify(tableData));
-  // }
-
-  // async function modifyStatus(item) {
-  //   fetch(`http://localhost:3001/usuarios/${item.login}`, {
-  //     method: "DELETE",
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => console.log(data))
-  //     .catch((error) => console.log(error));
-  //   window.location.reload(false);
-  // }
  const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
   const [isOpen, setIsOpen] = useState(false);
@@ -207,13 +108,14 @@ function Lista({ users }) {
   }
   async function deleteUser(item) {
     Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: 'Confirmar',
+      text: "Esta ação irá deletar o usuário.",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Sim, deletar!'
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(`https://api-back4-desk.vercel.app/usuariosDelete/${item.login}`, {
