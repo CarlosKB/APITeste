@@ -44,7 +44,7 @@ function Welcome() {
 
                 <div id='divCentral' className='row text-center mt-5' style={{ color: '#FF6B00' }}>
                     <div id='div1' className='col col-sm-12 col-md-4 align-items-center justify-content-center'>
-                        <h5>controle de usuários</h5>
+                        <h5>Controle de Usuários</h5>
                         <MDBBtn className='shadow-5' color='light'>
                             <figure className='figure'>
                                 <img
@@ -58,7 +58,7 @@ function Welcome() {
                     </div>
 
                     <div id='div2' className='col col-sm-12 col-md-4 align-items-center justify-content-center'>
-                        <h5>dashboard</h5>
+                        <h5>Dashboard</h5>
                         <MDBBtn className='shadow-5' color='light'>
                             <figure className='figure'>
                                 <img
