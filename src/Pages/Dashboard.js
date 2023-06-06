@@ -69,7 +69,7 @@ function Dashboard() {
         </div>
 
         <div className='row text-center mt-5' style={{ color: '#FF6B00', width: '100%' }}>
-            <canvas ref={chartRef} style={{ width: '490px', height: '490px', margin: '0%' }}></canvas>
+            <canvas ref={chartRef} style={{ width: '440px', height: '440px', margin: '0%' }}></canvas>
         </div>
 
       </div>
