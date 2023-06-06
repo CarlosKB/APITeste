@@ -68,7 +68,7 @@ function Dashboard() {
           <h6>Gráfico referente ao número de usuários Ativos e Inativos</h6>
         </div>
 
-        <div className='row text-center mt-5' style={{ color: '#FF6B00', width: '50%' }}>
+        <div className='row text-center mt-5' style={{ color: '#FF6B00', width: '100%' }}>
             <canvas ref={chartRef} style={{ width: '40%', height: '40%', margin: '0%' }}></canvas>
         </div>
 
