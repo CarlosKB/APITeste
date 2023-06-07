@@ -140,7 +140,7 @@ export function EditarPopup() {
         }
         if (response.data.msg === "Usuário atualizado com sucesso.") {
           Swal.fire("Sucesso!", response.data.msg, "success").then(function() {
-            navigate("/welcome");
+            navigate("/tabela");
           });
         }
       });
