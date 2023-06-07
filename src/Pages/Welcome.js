@@ -93,7 +93,7 @@ function Welcome() {
                                     src='images/people.svg'
                                     className='figure-img rounded mx-5 my-5'
                                     alt='...'
-                                    onClick={() => [navigate('/edicao')]}
+                                    onClick={() => [navigate('/editar')]}
                                 />
                             </figure>
                         </MDBBtn>
